@@ -1,4 +1,4 @@
-![consolestyle demo gif](https://raw.githubusercontent.com/ortense/consolestyle/main/media/consolestyle.jpg)
+![consolestyle demo in vscode terminal](https://raw.githubusercontent.com/ortense/consolestylejs/main/media/banner.png)
 
 # @ortense/consolestyle
 
