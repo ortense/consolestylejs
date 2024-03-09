@@ -1,10 +1,11 @@
-![consolestyle demo in vscode terminal](https://raw.githubusercontent.com/ortense/consolestylejs/main/media/banner.png)
-
 # @ortense/consolestyle
 
-[![install size](https://packagephobia.com/badge?p=@ortense/consolestyle)](https://packagephobia.com/result?p=@ortense/consolestyle) [![Coverage Status](https://coveralls.io/repos/github/ortense/consolestylejs/badge.svg?branch=main)](https://coveralls.io/github/ortense/consolestylejs?branch=main)
+![consolestyle demo in vscode terminal](https://raw.githubusercontent.com/ortense/consolestylejs/main/media/banner.png)
 
-ConsoleStyle is a lightweight package that allows you to style your console output with ease, adding colors, backgrounds, and various text styles to enhance your command-line experience.
+[![Coverage Status](https://coveralls.io/repos/github/ortense/consolestylejs/badge.svg?branch=main)](https://coveralls.io/github/ortense/consolestylejs?branch=main) ![npm bundle size](https://img.shields.io/bundlephobia/min/%40ortense%2Fconsolestyle) [![GitHub License](https://img.shields.io/github/license/mashape/apistatus?branch=main&label=License&logo=GitHub&logoColor=ffffff&labelColor=282828&color=informational&style=flat)](https://github.com/ortense/consolestylejs/blob/main/LICENSE)
+
+
+A lightweight package weighing just 18.8 kB that allows you to style your console output with ease, adding colors, backgrounds, and various text styles to enhance your command-line experience.
 
 
 ## Install
@@ -43,6 +44,7 @@ const message = underline(green('Simplicity is sophistication 🍃'))
 
 console.log(message)
 ```
+More details in the [complete documentation](https://ortense.github.io/consolestylejs/).
 
 ## Key Features
 
