@@ -2,7 +2,7 @@
 
 # @ortense/consolestyle
 
-[![install size](https://packagephobia.com/badge?p=@ortense/consolestyle)](https://packagephobia.com/result?p=@ortense/consolestyle) [![Coverage Status](https://coveralls.io/repos/github/ortense/consolestyle/badge.svg?branch=github-actions)](https://coveralls.io/github/ortense/consolestyle?branch=github-actions)
+[![install size](https://packagephobia.com/badge?p=@ortense/consolestyle)](https://packagephobia.com/result?p=@ortense/consolestyle) [![Coverage Status](https://coveralls.io/repos/github/ortense/consolestylejs/badge.svg?branch=main)](https://coveralls.io/github/ortense/consolestylejs?branch=main)
 
 ConsoleStyle is a lightweight package that allows you to style your console output with ease, adding colors, backgrounds, and various text styles to enhance your command-line experience.
 
