@@ -15,16 +15,16 @@ const bgDefaultColor = '\x1b[49m'
 const inverseCode = '\x1b[7m'
 const inverseResetCode = '\x1b[27m'
 
-export const red = (s: string) => `${redCode}${s}${defaultColorCode}`
-export const green = (s: string) => `${greenCode}${s}${defaultColorCode}`
-export const yellow = (s: string) => `${yellowCode}${s}${defaultColorCode}`
-export const blue = (s: string) => `${blueCode}${s}${defaultColorCode}`
-export const magenta = (s: string) => `${magentaCode}${s}${defaultColorCode}`
-export const cyan = (s: string) => `${cyanCode}${s}${defaultColorCode}`
-export const bgRed = (s: string) => `${bgRedCode}${s}${bgDefaultColor}`
-export const bgGreen = (s: string) => `${bgGreenCode}${s}${bgDefaultColor}`
-export const bgYellow = (s: string) => `${bgYellowCode}${s}${bgDefaultColor}`
-export const bgBlue = (s: string) => `${bgBlueCode}${s}${bgDefaultColor}`
-export const bgMagenta = (s: string) => `${bgMagentaCode}${s}${bgDefaultColor}`
-export const bgCyan = (s: string) => `${bgCyanCode}${s}${bgDefaultColor}`
-export const inverse = (s: string) => `${inverseCode}${s}${inverseResetCode}`
+export const red = (s: string): string => `${redCode}${s}${defaultColorCode}`
+export const green = (s: string): string => `${greenCode}${s}${defaultColorCode}`
+export const yellow = (s: string): string => `${yellowCode}${s}${defaultColorCode}`
+export const blue = (s: string): string => `${blueCode}${s}${defaultColorCode}`
+export const magenta = (s: string): string => `${magentaCode}${s}${defaultColorCode}`
+export const cyan = (s: string): string => `${cyanCode}${s}${defaultColorCode}`
+export const bgRed = (s: string): string => `${bgRedCode}${s}${bgDefaultColor}`
+export const bgGreen = (s: string): string => `${bgGreenCode}${s}${bgDefaultColor}`
+export const bgYellow = (s: string): string => `${bgYellowCode}${s}${bgDefaultColor}`
+export const bgBlue = (s: string): string => `${bgBlueCode}${s}${bgDefaultColor}`
+export const bgMagenta = (s: string): string => `${bgMagentaCode}${s}${bgDefaultColor}`
+export const bgCyan = (s: string): string => `${bgCyanCode}${s}${bgDefaultColor}`
+export const inverse = (s: string): string => `${inverseCode}${s}${inverseResetCode}`

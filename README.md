@@ -17,6 +17,7 @@ npm install @ortense/consolestyle  # npm
 yarn add  @ortense/consolestyle    # yarn
 pnpm add @ortense/consolestyle     # pnpm
 bun add @ortense/consolestyle      # bun
+deno add @ortense/consolestyle     # deno from jsr.io
 ```
 
 ## Usage
