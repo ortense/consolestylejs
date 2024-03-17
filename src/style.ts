@@ -58,4 +58,6 @@ const combine = (val: Stringifiable, lines: string[]): ConsoleStyle => {
  * console.log(message.toString())
  * ```
  */
-export const style = (value: Stringifiable): ConsoleStyle => combine(value, [])
+export function style (value: Stringifiable): ConsoleStyle {
+  return combine(value, [])
+}

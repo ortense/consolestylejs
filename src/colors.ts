@@ -15,16 +15,107 @@ const bgDefaultColor = '\x1b[49m'
 const inverseCode = '\x1b[7m'
 const inverseResetCode = '\x1b[27m'
 
-export const red = (s: string): string => `${redCode}${s}${defaultColorCode}`
-export const green = (s: string): string => `${greenCode}${s}${defaultColorCode}`
-export const yellow = (s: string): string => `${yellowCode}${s}${defaultColorCode}`
-export const blue = (s: string): string => `${blueCode}${s}${defaultColorCode}`
-export const magenta = (s: string): string => `${magentaCode}${s}${defaultColorCode}`
-export const cyan = (s: string): string => `${cyanCode}${s}${defaultColorCode}`
-export const bgRed = (s: string): string => `${bgRedCode}${s}${bgDefaultColor}`
-export const bgGreen = (s: string): string => `${bgGreenCode}${s}${bgDefaultColor}`
-export const bgYellow = (s: string): string => `${bgYellowCode}${s}${bgDefaultColor}`
-export const bgBlue = (s: string): string => `${bgBlueCode}${s}${bgDefaultColor}`
-export const bgMagenta = (s: string): string => `${bgMagentaCode}${s}${bgDefaultColor}`
-export const bgCyan = (s: string): string => `${bgCyanCode}${s}${bgDefaultColor}`
-export const inverse = (s: string): string => `${inverseCode}${s}${inverseResetCode}`
+/** 
+ * red - apply style to string
+ * @param {string} s
+ * @return {string} input string in red
+ */
+export function red (s: string): string {
+  return `${redCode}${s}${defaultColorCode}`
+}
+/** 
+ * green - apply style to string
+ * @param {string} s
+ * @return {string} input string in green
+ */
+export function green (s: string): string {
+  return `${greenCode}${s}${defaultColorCode}`
+}
+/** 
+ * yellow - apply style to string
+ * @param {string} s
+ * @return {string} input string in yellow
+ */
+export function yellow (s: string): string {
+  return `${yellowCode}${s}${defaultColorCode}`
+}
+/** 
+ * blue - apply style to string
+ * @param {string} s
+ * @return {string} input string in blue
+ */
+export function blue (s: string): string {
+  return `${blueCode}${s}${defaultColorCode}`
+}
+/** 
+ * magenta - apply style to string
+ * @param {string} s
+ * @return {string} input string in magenta
+ */
+export function magenta (s: string): string {
+  return `${magentaCode}${s}${defaultColorCode}`
+}
+/** 
+ * cyan - apply style to string
+ * @param {string} s
+ * @return {string} input string in cyan
+ */
+export function cyan (s: string): string {
+  return `${cyanCode}${s}${defaultColorCode}`
+}
+/** 
+ * bgRed - apply style to string
+ * @param {string} s
+ * @return {string} input string with red background
+ */
+export function bgRed (s: string): string {
+  return `${bgRedCode}${s}${bgDefaultColor}`
+}
+/** 
+ * bgGreen - apply style to string
+ * @param {string} s
+ * @return {string} input string with green background
+ */
+export function bgGreen (s: string): string {
+  return `${bgGreenCode}${s}${bgDefaultColor}`
+}
+/** 
+ * bgYellow - apply style to string
+ * @param {string} s
+ * @return {string} input string with yellow background
+ */
+export function bgYellow (s: string): string {
+  return `${bgYellowCode}${s}${bgDefaultColor}`
+}
+/** 
+ * bgBlue - apply style to string
+ * @param {string} s
+ * @return {string} input string with blue background
+ */
+export function bgBlue (s: string): string {
+  return `${bgBlueCode}${s}${bgDefaultColor}`
+}
+/** 
+ * bgMagenta - apply style to string
+ * @param {string} s
+ * @return {string} input string with magenta background
+ */
+export function bgMagenta (s: string): string {
+  return `${bgMagentaCode}${s}${bgDefaultColor}`
+}
+/** 
+ * bgCyan - apply style to string
+ * @param {string} s
+ * @return {string} input string with cyan background
+ */
+export function bgCyan (s: string): string {
+  return `${bgCyanCode}${s}${bgDefaultColor}`
+}
+/** 
+ * inverse - apply style to string
+ * @param {string} s
+ * @return {string} input string in inverted color
+ */
+export function inverse (s: string): string {
+  return `${inverseCode}${s}${inverseResetCode}`
+}
