@@ -4,33 +4,34 @@ import type { Context, ConsoleStyle, Stringifiable } from './types.ts'
 
 const EMPTY = ''
 
-const join = (lines: string[]) => lines.join('\n')
+const join = (lines: string[]): string => lines.join('\n')
 
-const withStyle = ({ value, lines }: Context) => ({
-  red: () => combine(c.red(value), lines),
-  green: () => combine(c.green(value), lines),
-  yellow: () => combine(c.yellow(value), lines),
-  blue: () => combine(c.blue(value), lines),
-  magenta: () => combine(c.magenta(value), lines),
-  cyan: () => combine(c.cyan(value), lines),
-  bgRed: () => combine(c.bgRed(value), lines),
-  bgGreen: () => combine(c.bgGreen(value), lines),
-  bgYellow: () => combine(c.bgYellow(value), lines),
-  bgBlue: () => combine(c.bgBlue(value), lines),
-  bgMagenta: () => combine(c.bgMagenta(value), lines),
-  bgCyan: () => combine(c.bgCyan(value), lines),
-  inverse: () => combine(c.inverse(value), lines),
-  bold: () => combine(t.bold(value), lines),
-  dim: () => combine(t.dim(value), lines),
-  italic: () => combine(t.italic(value), lines),
-  underline: () => combine(t.underline(value), lines),
-  strike: () => combine(t.strike(value), lines),
+const withStyle = ({ value, lines }: Context): Omit<ConsoleStyle, 'newLine' | 'emptyLine' | 'toString' > => ({
+  red: (): ConsoleStyle => combine(c.red(value), lines),
+  green: (): ConsoleStyle => combine(c.green(value), lines),
+  yellow: (): ConsoleStyle => combine(c.yellow(value), lines),
+  blue: (): ConsoleStyle => combine(c.blue(value), lines),
+  magenta: (): ConsoleStyle => combine(c.magenta(value), lines),
+  cyan: (): ConsoleStyle => combine(c.cyan(value), lines),
+  bgRed: (): ConsoleStyle => combine(c.bgRed(value), lines),
+  bgGreen: (): ConsoleStyle => combine(c.bgGreen(value), lines),
+  bgYellow: (): ConsoleStyle => combine(c.bgYellow(value), lines),
+  bgBlue: (): ConsoleStyle => combine(c.bgBlue(value), lines),
+  bgMagenta: (): ConsoleStyle => combine(c.bgMagenta(value), lines),
+  bgCyan: (): ConsoleStyle => combine(c.bgCyan(value), lines),
+  inverse: (): ConsoleStyle => combine(c.inverse(value), lines),
+  bold: (): ConsoleStyle => combine(t.bold(value), lines),
+  dim: (): ConsoleStyle => combine(t.dim(value), lines),
+  italic: (): ConsoleStyle => combine(t.italic(value), lines),
+  underline: (): ConsoleStyle => combine(t.underline(value), lines),
+  strike: (): ConsoleStyle => combine(t.strike(value), lines),
 })
 
-const withLines = ({ value, lines }: Context) => ({
-  newLine: (s: Stringifiable) => combine(s, [...lines, value]),
-  emptyLine: () => withLines({ value: EMPTY, lines: [...lines, value] }),
-  toString: () => join([...lines, value]),
+const withLines = ({ value, lines }: Context): Pick<ConsoleStyle, 'newLine' | 'emptyLine' | 'toString'> => ({
+  newLine: (s: Stringifiable): ConsoleStyle => combine(s, [...lines, value]),
+  emptyLine: (): Pick<ConsoleStyle, 'newLine' | 'emptyLine' | 'toString'> => 
+    withLines({ value: EMPTY, lines: [...lines, value] }),
+  toString: (): string => join([...lines, value]),
 })
 
 const combine = (val: Stringifiable, lines: string[]): ConsoleStyle => {
